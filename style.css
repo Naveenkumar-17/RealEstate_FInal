@@ -221,6 +221,7 @@ header .icons #menu-bars{
     padding:2rem;
     position: relative;
     width:26rem;
+    height: fit-content;
 }
 
 .agents .box-container .box .fa-envelope{
@@ -252,6 +253,7 @@ header .icons #menu-bars{
     height:10rem;
     width:10rem;
     margin:1rem 0;
+    margin-left:5rem;
 }
 
 .agents .box-container .box h3{
@@ -342,6 +344,9 @@ header .icons #menu-bars{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+iframe{
+    width:100%;
 }
 
 .contact .row form textarea,
