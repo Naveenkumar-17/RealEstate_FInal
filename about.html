@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Responsive-About-Page website | HTML and CSS</title>
 <style>
 *{
@@ -15,6 +17,10 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+#s-text{
+    color: white; 
+    font-size: 12px;
 }
 .section{
     width: 100%;
@@ -196,13 +202,13 @@ font-size: 19px;
     <header>
         <a href="#" class="logo"><span>ITC </span>RealEstate</a>
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="">About Us</a>
-            <a href="#services">Services</a>
+            <a href="Realestate.html#home">Home</a>
+            <!-- <a href="about.html">About Us</a> -->
+            <a href="Realestate.html#services">Services</a>
             <a href="property_type.html">Property</a>
             <a href="aminities.html">Amenities</a>
-            <a href="#agents">Agents</a>
-            <a href="#contact">Contact</a>
+            <a href="Realestate.html#agent">Agents</a>
+            <a href="Realestate.html#contact">Contact</a>
             <a href="">Layout</a>
         </nav>
          <div class="icons">
@@ -244,6 +250,60 @@ font-size: 19px;
             </div>
         </div>
     </div>
+    <style>
+        #foot{
+           height: 80px;
+           position: absolute;
+           width: 100%;
+        }
+    </style>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section class="footer" id="foot">
+
+        <div class="footer-container">
+    
+            <div class="box-container">
+    
+                <div class="box">
+                    <h3>Branch Location</h3>
+                    <a href="#">Chennai</a>
+                    <a href="#">Selam</a>
+                    <a href="#">Madurai</a>
+                    
+                </div> 
+                
+                <div class="box">
+                    <h3>Quick links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#agents">Agents</a>
+                    <a href="#contact">Contact</a>
+                </div> 
+    
+                <div class="box">
+                    <h3>Extra links</h3>
+                    <a href="#">My account</a>
+                    <a href="#">My favorite</a>
+                    <a href="#">My orders</a>
+                </div> 
+    
+                <div class="box">
+                    <h3>Follow us</h3>
+                    <a href="#" class="fab fa-facebook-f" style="color:blue; font-size: 20px;"> <span id="s-text">Facebook</span> </a>
+                    <a href="#"  class='fa-brands fa-x-twitter' style="color: black; font-size: 20px;">  <span id="s-text"> Twitter</span></a>
+                    <a href="#" class="fab fa-instagram" style="color:rgb(247, 9, 175); font-size: 20px;"> <span id="s-text">Instagram</span> </a>
+                    <a href="#" class="fab fa-linkedin" style="color:rgb(8, 8, 168); font-size: 20px;"><span id="s-text"> Linkedin</span> </a>
+                    <a href="#" class="fab fa-whatsapp" style="color:rgb(10, 214, 44); font-size: 20px;"><span id="s-text"> Whatsapp</span></a>
+                    <a href="#" class="fab fa-youtube" style="color:rgb(214, 10, 20); font-size: 20px;"><span id="s-text">  Youtube</span> </a>
+                </div> 
+    
+            </div>
+    
+            <div class="credit">@ all rights reserved</div>
+    
+        </div>
+    
+    </section>
 </body>
 
 </html>
