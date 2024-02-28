@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+/* Rental Listings Styles */
+.listings {
+    padding: 50px 0px;
+    
+}
+
+.listings h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.property-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.property-card .details {
+    padding: 10px;
+}
+
+.property-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.property-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Individual Property Page Styles */
+.property-page {
+    padding: 50px 0;
+}
+
+.property-page h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.property-page p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1 style="color: #ff6600;">ITC<span style="color: #fff;">RealEstate</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 style="color: black;">Find Your Dream Rental</h1>
+            <p style="color: black;">Search through our wide range of rental properties</p>
+            <a href="#listings" class="cta-button">View Rentals</a>
+        </div>
+    </section>
+
+    <!-- Rental Listings -->
+    <section id="listings" class="listings">
+        <div class="container">
+            <h2>Available Rentals</h2>
+            <div class="property-card">
+                <img src="./assets/external/farm2.jpg" alt="Property Image">
+                <div class="details">
+                    <h3>123 Ooty</h3>
+                    <p>3 bedrooms | 2 bathrooms | <br><strong>Rs</strong>20000/month</p>
+                    <p>Under the twinkling stars, whispered secrets dance on the night breeze.</p>
+                    <a href="#property1-details" class="cta-button">View Details</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="./assets/external/villa1.avif" alt="Property Image">
+                <div class="details">
+                    <h3>456 Kovalam</h3>
+                    <p>2 bedrooms | 1 bathroom | <br><strong>Rs</strong>50000/month</p>
+                    <p>A luxurious villa nestled amidst lush greenery, offering panoramic views of the serene countryside.</p>
+                    <a href="#property2-details" class="cta-button">View Details</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="./assets/external/apartment1.webp" alt="Property Image">
+                <div class="details">
+                    <h3>789 Kilambakkam</h3>
+                    <p>4 bedrooms | 3 bathrooms | <strong>Rs</strong>25000/month</p>
+                    <p>A modern apartment boasting sleek design and city skyline vistas from its balcony.</p>
+                    <a href="#property3-details" class="cta-button">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Property Pages -->
+    <section id="property1-details" class="property-page">
+        <div class="container">
+            <h2>123 Ooty</h2>
+            <img src="./assets/external/farm2.jpg" alt="Property Image">
+            <p>3 bedrooms | 2 bathrooms | <br> <strong>Rs</strong>20000/month</p>
+            <p>Under the twinkling stars, whispered secrets dance on the night breeze.</p>
+            <a href="#" class="cta-button">Contact Agent</a>
+        </div>
+    </section>
+
+    <section id="property2-details" class="property-page">
+        <div class="container">
+            <h2>456 Kovalam</h2>
+            <img src="./assets/external/villa1.avif" alt="Property Image">
+            <p>2 bedrooms | 1 bathroom | <br> <strong>Rs</strong>50000/month</p>
+            <p>A luxurious villa nestled amidst lush greenery, offering panoramic views of the serene countryside.</p>
+            <a href="#" class="cta-button">Contact Agent</a>
+        </div>
+    </section>
+
+    <section id="property3-details" class="property-page">
+        <div class="container">
+            <h2>789 Kilambakkam</h2>
+            <img src="./assets/external/apartment1.webp" alt="Property Image">
+            <p>4 bedrooms | 3 bathrooms |<br> <strong>Rs</strong>25000/month</p>
+            <p>A modern apartment boasting sleek design and city skyline vistas from its balcony.</p>
+            <a href="#" class="cta-button">Contact Agent</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h1 style="color: #ff6600;">ITC<span style="color: #fff ;">RealEstate</span></h1>
+            </div>
+            <div class="contact-info">
+                <p>Contact us: realestate@gmail.com | 123-456-7890</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

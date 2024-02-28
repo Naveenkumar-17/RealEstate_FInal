@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aminities</title>
+    <style>
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+           
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .list-type {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px 30px;
+            border-radius: 20px;
+            background-color: rgba(153, 153, 190, 0.7);
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            z-index: 1;
+
+        }
+
+        .navbar {
+            background: green;
+            display: flex;
+            width: 40%;
+            position: absolute;
+            top: 20px;
+            left: 20%;
+            background: transparent;
+            justify-content: space-between;
+
+        }
+
+        .list-type:hover {
+            box-shadow: white 5px 5px 3px 6px;
+        }
+
+        ul li {
+            font-size: 20px;
+            background-color: rgb(3, 3, 71);
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin-top: 25px;
+            color: white;
+            transition: transform 1s ease-out;
+        }
+
+        ul li:hover {
+            transform: scaleX(1.2);
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 106, 7);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .building {
+            width: 100%;
+            height: 100%;
+
+            background: transparent;
+        }
+
+        .building::after {
+
+            content: "";
+            /* Required for pseudo-elements */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* background-color: rgba(109, 109, 209, 0.233); */
+        }
+
+        .btn {
+            margin-left: 40%;
+            height: fit-content;
+            width: fit-content;
+         
+            color: white;
+            border-radius: 10%;
+            padding: 5px;
+            z-index:2;
+        }
+
+        .navbar>.btn {
+            font-size: 20px;
+            padding: 10px 30px;
+            border-radius: 20px;
+            margin-left: 50%;
+        }
+
+        .aminity-img {
+            position: relative;
+            left:40%; 
+            width: 200px;
+            height: 200px;
+            /* display: none;  */
+
+             
+        }
+
+        .aminity-img>img {
+            border-radius: 50%;
+        }
+
+
+        .banner {
+            width: fit-content;
+            background-image: linear-gradient(to right, blue, violet, red);
+            background-clip: text;
+            color: transparent;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 50px;
+            position: absolute;
+            top: 15px;
+            left: 2%;
+            stroke: aliceblue;
+        }
+        .content.visible{
+            display: block;
+        }
+        .amenity-description {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #fdfdfd}
+        .content{
+            width:600px;
+            height:400px;
+            padding:20px;
+            border-radius: 5px;
+            background: rgb(255, 255, 255,0.5);
+            position:absolute;
+            top:15%;
+            right: 10%;
+            overflow:scroll;
+            border-radius: 20px;
+            display: none;
+        }
+        .content:hover{
+            transform:scale(1.1)
+        }
+        .content>p{
+            font-family: 'Georgia', Times New Roman, Times, serif;
+            word-spacing: 5px;
+            font-size: 20px;
+        }
+        .quit-button {
+
+            background-color: #d9534f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 40%;
+        }
+#background{
+    filter: brightness(70%);
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="navbar">
+            <div class="btn"></div>
+
+        </div>
+        <div class="banner">
+            <p class="banner-text">Aminities Offered...</p>
+        </div>
+        <div class="list-type">
+            <ul style="list-style-type: none;">
+                <li>Roof Top Lounge</li>
+                <li>Swimming Pool</li>
+                <li>Grill and BBQ</li>
+                <li>Kid's Cycling Track</li>
+                <li>Adult Fitness</li>
+
+            </ul>
+            <div class="btn">View more</div>
+        </div>
+        <div class="back-arrow" id="back">
+            
+        </div>
+        <div class="building">
+            <img id="background"src="./assets/external/image3.jpg" alt="img">
+        </div>
+
+         <div class="content">
+            
+            <div class="aminity-img">
+                <img src="./assets/swimmingpool.jpeg" alt="sp">
+
+
+
+            </div>
+            <p class="amenity-description"> Luxurious Swimming Pool
+                Dive into a world of tranquility and recreation with our state-of-the-art swimming pool, a jewel among the amenities that define our residential spaces. Designed for both relaxation and fitness, our pool is a sanctuary where you can escape the hustle and bustle of daily life</p>
+                <button class="quit-button" id="quitButton">Cancel</button>
+            </div>
+    </div>
+    </div>
+    <script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const amenityList = document.querySelectorAll('.list-type li');
+const amenityImage = document.querySelector('.aminity-img img');
+const amenityDescription = document.querySelector('.amenity-description');
+const content = document.querySelector('.content');
+const backArrow = document.getElementById('back');
+const quitButton = document.getElementById('quitButton');
+const homeButton = document.querySelector('.btn');
+
+homeButton.addEventListener('click', () => {
+    console.log("Home clicked");
+    window.location.href = 'home.html';
+});
+
+
+backArrow.addEventListener('click', function () {
+    console.log('back clicked');
+    window.location.href = 'home.html';
+});
+
+function changeImageAndDescription(amenity) {
+    const amenityImages = {
+        "Roof Top Lounge": "./assets/roof top lounge.jpg",
+        "Swimming Pool": "./assets/swimmingpool.jpeg",
+        "Grill and BBQ": "./assets/gb.jpg",
+        "Kid's Cycling Track": "./assets/kid cycle.jpg",
+        "Adult Fitness": "./assets/fitness gym.jpeg"
+    };
+
+    const amenityDescriptions = {
+        "Roof Top Lounge": "Enjoy breathtaking views and unwind in our exclusive Roof Top Lounge.",
+        "Swimming Pool": "Dive into a world of tranquility and recreation with our state-of-the-art swimming pool.",
+        "Grill and BBQ": "Experience the joy of outdoor cooking and entertaining with our Grill and BBQ area.",
+        "Kid's Cycling Track": "A safe and fun space for kids to ride and explore on their bicycles.",
+        "Adult Fitness": "Stay fit and healthy with our fully-equipped Adult Fitness center."
+    };
+
+    const amenityName = amenity.textContent;
+
+     
+    amenityImage.src = amenityImages[amenityName];
+
+    
+    amenityDescription.textContent = amenityDescriptions[amenityName];
+
+     
+    content.classList.add('visible');
+}
+
+ 
+amenityList.forEach(function (amenity) {
+    amenity.addEventListener('click', function () {
+ 
+        changeImageAndDescription(amenity);
+    });
+});
+
+quitButton.addEventListener('click', function () {
+                 
+                content.classList.remove('visible');
+            });});
+
+    </script>
+</body>
+
+</html>

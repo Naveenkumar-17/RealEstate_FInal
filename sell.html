@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Selling Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Added background color for the body */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px; /* Increased font size for header */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 42px; /* Increased font size for hero heading */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px; /* Increased font size for hero paragraph */
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 24px; /* Increased padding for button */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size for button */
+}
+
+.btn:hover {
+    background-color: #cc5500;
+}
+
+/* Property Listing Styles */
+.properties {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.property {
+    margin-bottom: 40px;
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    vertical-align: top;
+    background-color: #fff; /* Added background color for property cards */
+    border-radius: 5px; /* Added border radius for property cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for property cards */
+}
+
+.property:last-child {
+    margin-right: 0;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; /* Rounded top corners for property images */
+}
+
+.property h3 {
+    margin: 20px 0; /* Increased margin for property headings */
+}
+
+.property p {
+    margin: 10px 0; /* Increased margin for property details */
+    font-size: 16px; /* Adjusted font size for property details */
+}
+
+.property .btn {
+    background-color: #007bff;
+    display: block;
+    padding: 10px 0; /* Increased padding for property buttons */
+}
+
+.property .btn:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;"> <Span style="color: #ff6600;">ITC</Span>Real Estate</h1>
+    </header>
+    <br><br>
+    <section class="hero">
+        <h2 style="color: black;">Find Your Dream Home</h2>
+        <p style="color: black;">Discover the perfect property for you.</p>
+        <a href="#properties" class="btn">View Properties</a>
+    </section>
+<br><br><br><br>
+    <section class="properties" id="properties">
+        <h2>Featured Properties</h2><br>
+        <div class="container">
+            <div class="property">
+                <img src="./assets/external/apartment3.webp" alt="Property 1">
+                <h3>Modern Apartment</h3>
+                <p>Location: Chennai, TamilNadu</p>
+                <p>Price: Rs-xxx,xxx</p>
+                <a href="#details1" class="btn" onclick="showDetails(1)">View Details</a>
+                <div id="details1" class="details" style="display: none;">
+                    <p>Additional details about the Modern Apartment.</p>
+                </div>
+            </div>
+            <div class="property">
+                <img src="./assets/external/farm3.jpg" alt="Property 2">
+                <h3>Farm House</h3>
+                <p>Location: Ooty, TamilNadu</p>
+                <p>Price: Rs-xxx,xxx</p>
+                <a href="#details2" class="btn" onclick="showDetails(2)">View Details</a>
+                <div id="details2" class="details" style="display: none;">
+                    <p>Additional details about the Luxury Villa.</p>
+                </div>
+            </div>
+            <div class="property">
+                <img src="./assets/external/villa1.avif" alt="Property 3">
+                <h3>Villa House</h3>
+                <p>Location: City, State</p>
+                <p>Price: Rs-xxx,xxx</p>
+                <a href="#details3" class="btn" onclick="showDetails(3)">View Details</a>
+                <div id="details3" class="details" style="display: none;">
+                    <p>Additional details about the Cozy Cottage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showDetails(propertyNumber) {
+            var detailsId = "details" + propertyNumber;
+            var details = document.getElementById(detailsId);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

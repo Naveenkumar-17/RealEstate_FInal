@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aminities</title>
+    <style>
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, blue 40%, white);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .list-type {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px 30px;
+            border-radius: 20px;
+            background-color: rgba(3, 3, 78, 0.7);
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            z-index: 1;
+
+        }
+
+        .navbar {
+            background: green;
+            display: flex;
+            width: 40%;
+            position: absolute;
+            top: 20px;
+            left: 20%;
+            background: transparent;
+            justify-content: space-between;
+
+        }
+
+        .list-type:hover {
+            box-shadow: white 5px 5px 3px 6px;
+        }
+
+        ul li {
+            font-size: 20px;
+            background-color: rgb(3, 3, 71);
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin-top: 25px;
+            color: white;
+            transition: transform 1s ease-out;
+        }
+
+        ul li:hover {
+            transform: scaleX(1.2);
+            color: blue;
+            background-color: aliceblue;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .building {
+            width: 100%;
+            height: 100%;
+
+            background: transparent;
+        }
+
+        .building::after {
+
+            content: "";
+            /* Required for pseudo-elements */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* background-color: rgba(109, 109, 209, 0.233); */
+        }
+
+        .btn {
+            margin-left: 40%;
+            height: fit-content;
+            width: fit-content;
+            background-color: transparent;
+            color: white;
+            border-radius: 10%;
+            padding: 5px;
+        }
+
+        .navbar>.btn {
+            font-size: 20px;
+            padding: 10px 30px;
+            border-radius: 20px;
+            margin-left: 50%;
+        }
+
+        .aminity-img {
+            position: relative;
+            left:40%; 
+            width: 200px;
+            height: 200px;
+            /* display: none;  */
+
+             
+        }
+
+        .aminity-img>img {
+            border-radius: 30%;
+        }
+
+    
+        .banner {
+            width: fit-content;
+            height:fit-content;
+            background-image: linear-gradient(to right, blue, violet, red);
+            padding: 5px;
+            color: white;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 50px;
+            position: absolute;
+            top: 55px;
+            left: 2%;
+            stroke: aliceblue;
+            text-align: center;
+        }
+        .content.visible{
+            display: block;
+        }
+        .amenity-description {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333}
+        .content{
+            width:600px;
+            height:400px;
+            padding:20px;
+            border-radius: 5px;
+            background: rgba(228, 220, 220,0.7);
+            position:absolute;
+            top:15%;
+            right: 10%;
+            overflow:scroll;
+            border-radius: 20px;
+            display: none;
+        }
+        .content:hover{
+            transform:scale(1.1)
+        }
+        .content>p{
+            font-family: 'Georgia', Times New Roman, Times, serif;
+            word-spacing: 5px;
+            font-size: 20px;
+        }
+        .quit-button {
+
+            background-color: #d9534f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 40%;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="navbar">
+            <div class="btn" id="home"></div>
+
+        </div>
+        <div class="banner">
+            <span class="banner-text">Properties Available</span>
+        </div>
+        <div class="list-type">
+            <ul style="list-style-type: none;">
+                <li>Apartments</li>
+                <li>Luxury Villas</li>
+                <li>Residential plots</li>
+                <li>Luxury Estates</li>
+                <li>Farm Houses</li>
+
+            </ul>
+             
+        </div>
+        <div class="back-arrow" id="back">
+            
+        </div>
+        <div class="building">
+            <img src="./assets/aminity-building.jpg" alt="img">
+        </div>
+
+         <div class="content">
+            
+            <div class="aminity-img">
+                <img src="./assets/swimmingpool.jpeg" alt="sp">
+
+
+
+            </div>
+            <p class="amenity-description"> Luxurious Swimming Pool
+                Dive into a world of tranquility and recreation with our state-of-the-art swimming pool, a jewel among the amenities that define our residential spaces. Designed for both relaxation and fitness, our pool is a sanctuary where you can escape the hustle and bustle of daily life</p>
+                <button class="quit-button" id="quitButton">Cancel</button>
+            </div>
+    </div>
+    </div>
+    <script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const amenityList = document.querySelectorAll('.list-type li');
+const amenityImage = document.querySelector('.aminity-img img');
+const amenityDescription = document.querySelector('.amenity-description');
+const content = document.querySelector('.content');
+const backArrow = document.getElementById('back');
+const quitButton = document.getElementById('quitButton');
+const homeButton = document.getElementById('home');
+
+homeButton.addEventListener('click', () => {
+    console.log("Home clicked");
+    window.location.href = 'home.html';
+});
+
+
+backArrow.addEventListener('click', function () {
+    console.log('back clicked');
+    window.location.href = 'home.html';
+});
+
+
+function changeImageAndDescription(amenity) {
+    const amenityImages = {
+        "Apartments": "./assets/Properties/apartment.jpg",
+        "Luxury Villas": "./assets/Properties/Luxury villa.jpeg",
+        "Residential plots": "./assets/Properties/plots.jpg",
+        "Luxury Estates": "./assets/Properties/luxury estate.jpeg",
+        "Farm Houses": "./assets/Properties/farmhouse.jpg"
+    };
+
+    const amenityDescriptions = {
+        "Apartments": " Contemporary living meets convenience in our exquisite apartments. Enjoy modern amenities, stylish interiors, and a vibrant community atmosphere. Perfect for individuals or families seeking a comfortable and connected urban lifestyle.",
+        "Luxury Villas": " Indulge in the epitome of opulence with our luxury villas. Experience lavish living spaces, bespoke design, and private amenities. These exclusive residences offer a perfect blend of sophistication and tranquility for those who desire a grand lifestyle.",
+        "Residential plots": "Build your dream home on one of our thoughtfully planned residential plots. Embrace the freedom to customize your living space, surrounded by nature. Each plot is a canvas for your vision, providing a unique opportunity to create a home that reflects your personal style.",
+        "Luxury Estates": "Our luxury estates redefine elegance and grandeur. Sprawling across expansive grounds, these estates offer a blend of timeless architecture and modern comforts. Immerse yourself in luxury, privacy, and the finest details that make a residence truly extraordinary.",
+        "Farm Houses": "Escape to the serenity of our farmhouses, where rural charm meets contemporary living. These retreats provide a peaceful oasis away from the hustle and bustle, allowing you to reconnect with nature. Ideal for those who seek a tranquil escape with the comforts of a well-designed home."
+    };
+
+    const amenityName = amenity.textContent;
+
+     
+    amenityImage.src = amenityImages[amenityName];
+
+    
+    amenityDescription.textContent = amenityDescriptions[amenityName];
+
+     
+    content.classList.add('visible');
+}
+
+ 
+amenityList.forEach(function (amenity) {
+    amenity.addEventListener('click', function () {
+ 
+        changeImageAndDescription(amenity);
+    });
+});
+
+quitButton.addEventListener('click', function () {
+                 
+                content.classList.remove('visible');
+            });});
+
+    </script>
+</body>
+
+</html>
