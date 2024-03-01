@@ -490,6 +490,7 @@ width: 9cm;
 .menu-icon{
     display:none;
 }
+
 /* -----------------------------media queries------------------------------------------------- */
 @media only screen and (max-width:640px){
     header .navbar a{
