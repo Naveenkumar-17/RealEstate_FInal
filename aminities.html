@@ -135,9 +135,9 @@
             border-radius: 5px;
             background: rgb(255, 255, 255,0.5);
             position:absolute;
-            top:15%;
+            top:20%;
             right: 10%;
-            overflow:scroll;
+            /* overflow:scroll; */
             border-radius: 20px;
             display: none;
         }
@@ -163,6 +163,7 @@
 #background{
     filter: brightness(70%);
 }
+ 
     </style>
 
 </head>
@@ -174,7 +175,7 @@
         <a href="Realestate.html#home">Home</a>
         <a href="Realestate.html#services">Services</a>
         <a href="property_type.html">Property</a>
-        <a href="aminities.html">Amenities</a>
+       
         <a href="Realestate.html#agents">Agents</a>
         <a href="Realestate.html#contact">Contact</a>
     </nav>
@@ -203,7 +204,7 @@
                 <li>Adult Fitness</li>
 
             </ul>
-            <div class="btn">View more</div>
+            
         </div>
         <div class="back-arrow" id="back">
             
@@ -222,7 +223,7 @@
             </div>
             <p class="amenity-description"> Luxurious Swimming Pool
                 Dive into a world of tranquility and recreation with our state-of-the-art swimming pool, a jewel among the amenities that define our residential spaces. Designed for both relaxation and fitness, our pool is a sanctuary where you can escape the hustle and bustle of daily life</p>
-                <button class="quit-button" id="quitButton">Cancel</button>
+                <button class="quit-button" id="quitButton">Close</button>
             </div>
     </div>
     </div>
@@ -281,7 +282,7 @@ function changeImageAndDescription(amenity) {
 
  
 amenityList.forEach(function (amenity) {
-    amenity.addEventListener('click', function () {
+    amenity.addEventListener('mouseover', function () {
  
         changeImageAndDescription(amenity);
     });
